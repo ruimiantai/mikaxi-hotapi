@@ -16,8 +16,22 @@
       "src": "package.json",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/**"]
+        "includeFiles": ["dist/**", "src/**"]
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/zhihu",
+      "dest": "/dist/routes/zhihu.js"
+    },
+    {
+      "src": "/api/weibo",
+      "dest": "/dist/routes/weibo.js"
+    },
+    {
+      "src": "/api/baidu",
+      "dest": "/dist/routes/baidu.js"
     }
   ]
 }
